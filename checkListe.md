@@ -3,7 +3,7 @@
 On mettra un 'X' dans la checkbox pour l'item courant
 on ~~barrera~~ lorsque cette item sera réalisé
 
-* [] règles du jeu
+* [ ] règles du jeu
 * [ ] animations avec three.js
 * [ ] style avec bootstrap
 * [ ] des boutons et des réactions avec js
