@@ -20,11 +20,9 @@ on ~~barrera~~ lorsque cette item sera réalisé
 
 
 #Développement
-[ ] Créer un dé avec Tree.js
-[ ] Créer bibliothèque css
-[ ] Créer boutons de stop et lancer
-[ ] liste déroulante pour sélectionner le jeu (lancer de poids)
-[ ] récupérer l'input en appuyant sur le button
-[ ] partie back
-[ ] 
-[ ] 
+* [ ] Créer un dé avec Tree.js
+* [ ] Créer bibliothèque css
+* [ ] Créer boutons de stop et lancer
+* [ ] liste déroulante pour sélectionner le jeu (lancer de poids)
+* [ ] récupérer l'input en appuyant sur le button
+* [ ] partie back
