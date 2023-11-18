@@ -107,6 +107,32 @@
     <script src="./js/script.js"></script>
 
     <!-- Three.js -->
+    // Création d'un dé avec 6 faces
+        const createDice = () => {
+            const geometry = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+            return new THREE.Mesh(geometry, material);
+        };
+    // Ajout de 8 dés à la scène
+        const dice = Array.from({ length: 8 }, createDice);
+        dice.forEach((die, index) => {
+            die.position.x = (index % 4) * 2;
+            die.position.y = Math.floor(index / 4) * 2;
+            scene.add(die);
+        });
+    // Fonction de lancer de dé
+        const rollDice = () => {
+            dice.forEach(die => {
+                die.rotation.x += Math.random() * 2 * Math.PI;
+                die.rotation.y += Math.random() * 2 * Math.PI;
+                die.rotation.z += Math.random() * 2 * Math.PI;
+            });
+        };
+    // Animation de la scène
+        const animate = () => {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        };
 
 
 
