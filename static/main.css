@@ -47,10 +47,13 @@ footer {
     height: 50px;
     width: 50px;
     padding: 50px;
-    margin: 50px auto;
+    margin: 100px ;
     border: 1px solid gray;
     border-radius: 10px;  
     font-size:80px;
   }
 
+  de{
+    padding: 10 10 10 10px;
+  }
   
