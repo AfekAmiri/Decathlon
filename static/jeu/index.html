@@ -115,10 +115,15 @@
     'https://www.calculator.net/img/dice5.png',
     'https://www.calculator.net/img/dice6.png',
        ];
+    // Charger les textures pour chaque face du dé
+    const textures = imageUrls.map(url => new THREE.TextureLoader().load(url));
+    // Créer un matériau avec les textures chargées
+    const materialArray = textures.map(texture => new THREE.MeshBasicMaterial({ map: texture }));
+     // Créer un matériau composé des textures
+    const material = new THREE.MeshFaceMaterial(materialArray);
     // Création d'un dé avec 6 faces
         const createDice = () => {
             const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
             return new THREE.Mesh(geometry, material);
         };
     // Ajout de 8 dés à la scène
