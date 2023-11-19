@@ -5,7 +5,7 @@ var dice = {
     return randomNumber;
   }
 }
-var button = document.getElementById('button');
+var button1 = document.getElementById('button');
 var button2 = document.getElementById('stopBtn');
 
 const liste = [];
@@ -15,10 +15,10 @@ const listeresultat = [];
 
 function printNumber(number) {
   var placeholder = document.getElementById('placeholder');
-
   // Create an image element
   var image = document.createElement('img');
   image.title = number;
+  image.classList.add('rolling'); // Ajoute la classe 'rolling' pour l'effet de rotation
 
   // Set the source of the image based on the number
   switch (number) {
@@ -50,14 +50,18 @@ function printNumber(number) {
 
   // Clear the existing content of the placeholder element
   placeholder.innerHTML = '';
-
   // Append the image to the placeholder element
   placeholder.appendChild(image);
+  // Ajoute un délai avant de retirer la classe 'rolling' pour simuler le temps de rotation
+  setTimeout(function() {
+    image.classList.remove('rolling');
+    image.classList.add('fixed'); // Ajoute la classe 'fixed' pour indiquer que le dé est fixé
+  }, 100);
 }
 
 function printtotal(liste) {
   if (liste.length >= 8) {
-    button.disabled == true;
+    button1.disabled == true;
   }
   var total = 0;
   for (var i = 0; i < liste.length; i++) {
@@ -399,7 +403,7 @@ function printresult(liste) {
   placeholder.appendChild(image);
 
   if (liste.length >= 8) {
-    button.disabled == true;
+    button1.disabled == true;
   }
 
 }
@@ -417,21 +421,19 @@ function printresulttot(liste) {
 
 }
 
-
-
-button.onclick = function () {
+button1.onclick = function () {
   var result = dice.roll();
   printNumber(result);
 
   liste.push(result);
   if (result == 1) {
-    button.disabled = true;
+    button1.disabled = true;
     liste.splice(0, liste.length); // Empty the 'liste' array
   }
 
   console.log(liste.length)
   if (liste.length >= 8) {
-    button.disabled = true;
+    button1.disabled = true;
   }
 
 
@@ -449,10 +451,11 @@ button2.onclick = function () {
   listeresultat.push(total);
   liste.splice(0, liste.length); // Empty the 'liste' array
   printresult(liste);
-  button.disabled = false;
+  button1.disabled = false;
   printresulttot(listeresultat);
   if (listeresultat.length >= 3) {
     button2.disabled = true;
-    button.disabled = true;
+    button1.disabled = true;
+
   }
 }
