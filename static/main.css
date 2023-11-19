@@ -67,7 +67,7 @@ bottom: 10px;
 
 button {
 position: relative;
-top:10px;
+top:7px;
 left:10px;
 background-color: rgb(61, 173, 33) !important;
 border-radius: 6px;
@@ -76,6 +76,7 @@ color: rgb(255, 255, 255);
 padding: 10px;
 text-transform: uppercase;
 width: 200px;
+height: 40px;
 cursor: pointer;
 box-shadow: 1px 3px #50514F;
 outline: none;
