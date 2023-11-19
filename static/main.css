@@ -69,7 +69,7 @@ button {
 position: relative;
 top:10px;
 left:10px;
-background-color: rgb(240, 10, 14) !important;
+background-color: rgb(61, 173, 33) !important;
 border-radius: 6px;
 border: none;
 color: rgb(255, 255, 255);
@@ -101,3 +101,52 @@ margin-top: 100px !important;
 .de{
 padding: 10 10 10 10px;
 }
+
+button.stopBtn {
+  position: relative;
+  top:10px;
+  left:10px;
+  background-color: rgb(202, 26, 26) !important;
+  border-radius: 6px;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-transform: uppercase;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 1px 3px #50514F;
+  outline: none;
+  transition: .3s; 
+  }
+
+
+button.stopBtn:hover, button:active {
+  outline: none;
+  background: #50514F;
+  cursor: pointer;
+  transform: translateY(5px);
+  }
+
+
+  button.reloadBtn {
+    position: relative;
+    top:10px;
+    left:10px;
+    background-color: rgb(33, 147, 151) !important;
+    border-radius: 6px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s; 
+    }
+    button.reloadBtn:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(5px);
+    }
