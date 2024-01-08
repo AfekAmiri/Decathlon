@@ -1,6 +1,7 @@
 {
   "name": "decathlon",
   "version": "1.0.0",
+  "type": "module",
   "description": "Projet de jeu de dés",
   "main": "index.js",
   "scripts": {
@@ -19,5 +20,4 @@
   "dependencies": {
     "express": "^4.18.2"
   }
-  "type": "module",{.language-}
 }
